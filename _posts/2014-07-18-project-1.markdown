@@ -1,0 +1,11 @@
+---
+layout: default
+modal-id: 1
+date: 2014-07-18
+img: cabin.png
+alt: image-alt
+project-date: April 2014
+client: Start Bootstrap
+category: Web Development
+description: <b>Use this area of the page to describe your project.</b>  AS&colon; Do not lecture me, Obi Wan. I see through the lies of the Jedi. I do not fear the dark side as you do. I have brought peace, justice and freedom to my new empire.<br>  OWK Your new empire? Anakin, my alligiance is to the republic. To democracy!  &nbsp; &nbsp;AS If you're not with me, then you're my enemy.  &#13;&#10;OWK Only a Sith deals with absolutes. I'll do what I must.  AS You will try...  ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, <br><br>vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+---
