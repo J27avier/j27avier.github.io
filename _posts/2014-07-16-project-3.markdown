@@ -4,9 +4,9 @@ modal-id: 3
 date: 2014-07-16
 img: Robot-sized-round.png
 alt: image-alt
-project-date: April 2014
-title: Visual Servoing
-category: Web Development
-tech: ROS
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+project-date: December 2021
+title: Robot Arm & Visual Control
+category: Graduate Project (6 members)
+tech: ROS, Python, RGBD Camera, Vision Trackers
+description: A robot manipulator (WAM by Barrett Advance Robotics) is controlled in an Uncalibrated Visuals Servoing scheme where an RGBD Camera tracks the location of the end effector and the location of a target position. <br> &nbsp; &nbsp; &nbsp; &nbsp; My task consisted in designing a trajectory that connected the end effector to the final point with a smooth line in 3D space. That line was segmented into waypoints which were transmitted via ROS Publisher/Subscriber Nodes to the robot's control software. The controller only used visual feedback provided by the camera.
 ---

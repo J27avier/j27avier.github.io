@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2023-04-27T13:21:46-06:00</updated>
+  <updated>2023-05-02T17:18:42-06:00</updated>
   <id>http://localhost:4000/</id>
 
   
@@ -20,8 +20,8 @@
   
   
     <entry>
-      <title type="html">Virtual Power Plant</title>
-      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Virtual Power Plant" />
+      <title type="html">Electric Vehicle Virtual Power Plant</title>
+      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Electric Vehicle Virtual Power Plant" />
       <published>2023-03-10T00:00:00-07:00</published>
       <updated>2023-03-10T00:00:00-07:00</updated>
       <id>http://localhost:4000/project-1</id>
@@ -88,8 +88,8 @@
     </entry>
   
     <entry>
-      <title type="html">Project 5</title>
-      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Project 5" />
+      <title type="html">Geo-Alerts for Delivery Trucks</title>
+      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Geo-Alerts for Delivery Trucks" />
       <published>2020-07-12T00:00:00-06:00</published>
       <updated>2020-07-12T00:00:00-06:00</updated>
       <id>http://localhost:4000/project-5</id>
@@ -108,7 +108,7 @@
       </author>
 
       
-        <category term="Web Development" />
+        <category term="Data Scientist at Intelimetrica" />
       
 
       
@@ -122,8 +122,8 @@
     </entry>
   
     <entry>
-      <title type="html">Visual Servoing</title>
-      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Visual Servoing" />
+      <title type="html">Robot Arm &amp;amp; Visual Control</title>
+      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Robot Arm &amp; Visual Control" />
       <published>2014-07-16T00:00:00-06:00</published>
       <updated>2014-07-16T00:00:00-06:00</updated>
       <id>http://localhost:4000/project-3</id>
@@ -142,7 +142,7 @@
       </author>
 
       
-        <category term="Web Development" />
+        <category term="Graduate Project (6 members)" />
       
 
       
@@ -156,8 +156,8 @@
     </entry>
   
     <entry>
-      <title type="html">Leader-follower Mobile Robots</title>
-      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Leader-follower Mobile Robots" />
+      <title type="html">IEEE Conference&amp;amp;colon; Leader-follower</title>
+      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="IEEE Conference&amp;colon; Leader-follower" />
       <published>2014-07-15T00:00:00-06:00</published>
       <updated>2014-07-15T00:00:00-06:00</updated>
       <id>http://localhost:4000/project-4</id>
@@ -176,7 +176,7 @@
       </author>
 
       
-        <category term="Web Development" />
+        <category term="Undergraduate Publication" />
       
 
       
@@ -190,8 +190,8 @@
     </entry>
   
     <entry>
-      <title type="html">Project 6</title>
-      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Project 6" />
+      <title type="html">Tracked Mobile Robot</title>
+      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Tracked Mobile Robot" />
       <published>2014-07-15T00:00:00-06:00</published>
       <updated>2014-07-15T00:00:00-06:00</updated>
       <id>http://localhost:4000/project-6</id>
@@ -210,7 +210,7 @@
       </author>
 
       
-        <category term="Web Development" />
+        <category term="Undergraduate Project (4 members)" />
       
 
       

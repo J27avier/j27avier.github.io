@@ -1,0 +1,4 @@
+*.swp
+_posts/*.swp
+_includes/*.swp
+js/*.swp

@@ -39,13 +39,13 @@ footer:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: linkedin
+  - title: <i class="fa-brands fa-linkedin"></i>
     url: https://www.linkedin.com/in/javier-sales-ortiz/
-  - title: github
+  - title: <i class="fa-brands fa-github"></i>
     url: https://github.com/J27avier
     #  - title: stack-overflow
     # url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: google
+  - title: <i class="fa-solid fa-graduation-cap"></i>
     url: https://scholar.google.com/citations?user=5bSpQkYAAAAJ&hl=en
 
 # Postal address (add as many lines as necessary)

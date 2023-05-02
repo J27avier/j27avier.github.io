@@ -4,9 +4,9 @@ modal-id: 4
 date: 2014-07-15
 img: Mobile-size-round.png
 alt: image-alt
-project-date: April 2014
-title: Leader-follower Mobile Robots
-client: Start Bootstrap
-category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+project-date: August 2019
+title: IEEE Conference&colon; Leader-follower
+category: Undergraduate Publication 
+tech: Heterogeneous Robots, Computer Vision, Mbed Microcontroller, Open MV Camera, C, Python, Matlab, Vicon Motion Capture System
+description:  <a href="https://ieeexplore.ieee.org/abstract/document/8885046">This project  as accepted to IEEE's MWSCAS 2019</a>. It consists of a motion coordination technique for an omnidirectional and a differential-drive robot. <br> &nbsp; &nbsp; The strategy forms the follower robot relative to the leader robot using a local vision system for distance and heading angle measurement. The leader robot follows a desired trajectory in the plane while using a consensus approach to converge with the follower's angle. To evaluate the control strategy's effectiveness, we conducted experiments using two industrial-focused robots and a motion capture system.
 ---

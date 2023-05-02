@@ -4,8 +4,9 @@ modal-id: 5
 date: 2020-07-12
 img: visits2-round-size.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
+project-date: May 2021
+category: Data Scientist at Intelimetrica
+tech: PySpark, Python, Azure Databricks, MS SQL Server, Folium, Geopandas
+title: Geo-Alerts for Delivery Trucks 
 description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
 ---

@@ -4,9 +4,9 @@ modal-id: 6
 date: 2014-07-15
 img: orubot-size-round.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-display-title: Hello
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+project-date: December 2018
+category: Undergraduate Project (4 members)
+tech: Laser cutting, CAD (Inventor), Bluetooth, GPS, Mbed Microcontroller, C, Control Theory
+title: Tracked Mobile Robot
+description: This tracked robot has custom-designed mechanical, electrical, and control components. The robot has a differential configuration, featuring two DC motors equipped with encoders for providing precise feedback. <br> &nbsp; &nbsp; &nbsp; &nbsp; The body is constructed using laser-cut acrylic material and fitted with ready-made tracks. The robot can be remotely controlled using a mobile application, or it can navigate to a specific location autonomously via GPS. The control mechanisms utilize PID for manual control and state feedback for autonomous navigation.
 ---
