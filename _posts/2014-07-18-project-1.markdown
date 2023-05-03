@@ -4,7 +4,7 @@ modal-id: 1
 date: 2023-03-10
 img: VPP-op-size-round.png
 alt: image-alt
-project-date: April 2014
+project-date: February 2023
 title: ACM Conference&colon; Electric Vehicle V2G
 category: Graduate Research 
 tech: Python, Cvxpy, Pandas
