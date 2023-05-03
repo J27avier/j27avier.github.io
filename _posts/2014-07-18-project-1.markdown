@@ -5,8 +5,8 @@ date: 2023-03-10
 img: VPP-op-size-round.png
 alt: image-alt
 project-date: April 2014
-title: Electric Vehicle Virtual Power Plant 
+title: ACM Conference&colon; Electric Vehicle V2G
 category: Web Development
 tech: Python
-description: <b>Use this area of the page to describe your project.</b>  AS&colon; Do not lecture me, Obi Wan. I see through the lies of the Jedi. I do not fear the dark side as you do. I have brought peace, justice and freedom to my new empire.<br>  OWK Your new empire? Anakin, my alligiance is to the republic. To democracy!  &nbsp; &nbsp;AS If you're not with me, then you're my enemy.  &#13;&#10;OWK Only a Sith deals with absolutes. I'll do what I must.  AS You will try...  ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, <br><br>vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+description: <a href="https://j27avier.github.io/pdf/V2GContracts_eEnergy23.pdf">This project, currently under review for ACM's e-Energy conference 2023 with preprint available here</a>, explores the concept of vehicle-to-grid (V2G) technology. V2G technology allows electric vehicles (EVs) to serve as battery packs, enabling users to sell stored excess battery back to the grid when energy demand peaks. <br> &nbsp; &nbsp; The project presents a unique approach to incentivize private EV owners to participate in V2G using contract theory from economics, thus creating a Virtual Power Plant (VPP) by aggregating numerous batteries. The project also simulates results over a year's worth of data on EV charging sessions and electricity market prices, revealing a profitability increase of over 12% compared to the baseline.
 ---

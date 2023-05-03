@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2023-05-02T17:18:42-06:00</updated>
+  <updated>2023-05-03T16:28:48-06:00</updated>
   <id>http://localhost:4000/</id>
 
   
@@ -20,8 +20,8 @@
   
   
     <entry>
-      <title type="html">Electric Vehicle Virtual Power Plant</title>
-      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Electric Vehicle Virtual Power Plant" />
+      <title type="html">ACM Conference&amp;amp;colon; Electric Vehicle V2G</title>
+      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="ACM Conference&amp;colon; Electric Vehicle V2G" />
       <published>2023-03-10T00:00:00-07:00</published>
       <updated>2023-03-10T00:00:00-07:00</updated>
       <id>http://localhost:4000/project-1</id>
@@ -74,7 +74,7 @@
       </author>
 
       
-        <category term="Web Development" />
+        <category term="Graduate Project (3 members)" />
       
 
       
@@ -88,8 +88,8 @@
     </entry>
   
     <entry>
-      <title type="html">Geo-Alerts for Delivery Trucks</title>
-      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Geo-Alerts for Delivery Trucks" />
+      <title type="html">Geotracking Alerts for Delivery Trucks</title>
+      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Geotracking Alerts for Delivery Trucks" />
       <published>2020-07-12T00:00:00-06:00</published>
       <updated>2020-07-12T00:00:00-06:00</updated>
       <id>http://localhost:4000/project-5</id>

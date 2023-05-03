@@ -7,6 +7,6 @@ alt: image-alt
 project-date: May 2021
 category: Data Scientist at Intelimetrica
 tech: PySpark, Python, Azure Databricks, MS SQL Server, Folium, Geopandas
-title: Geo-Alerts for Delivery Trucks 
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+title: Geotracking Alerts for Delivery Trucks 
+description: As a component of a large multinational beverage company's operations monitoring platform, this project analyzed the GPS coordinates of their delivery vehicles. The GPS system posted the coordinates at regular intervals, allowing us to generate alerts whenever a vehicle visited a client, exceeded its visit time, entered a prohibited geofence, and other similar events. <br> &nbsp; &nbsp; &nbsp; &nbsp; The project was deployed in Azure Databricks, and I was responsible for designing the code that identified each alert.
 ---
