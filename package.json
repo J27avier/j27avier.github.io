@@ -1,0 +1,21 @@
+{
+  "name": "j27avier.github.io",
+  "version": "1.0.0",
+  "description": "Personal portfolio, blog, and WASM demos for Javier",
+  "type": "module",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:css": "npx @tailwindcss/cli -i ./src/css/main.css -o ./_site/css/main.css --watch",
+    "dev:eleventy": "eleventy --serve",
+    "build": "npm run build:css && npm run build:eleventy",
+    "build:css": "npx @tailwindcss/cli -i ./src/css/main.css -o ./_site/css/main.css --minify",
+    "build:eleventy": "eleventy"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/cli": "^4.0.0",
+    "concurrently": "^9.1.0"
+  }
+}

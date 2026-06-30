@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+title: Demos
+---
+<h1 class="text-2xl font-bold mb-3">Live Demos</h1>
+<p class="text-gray-600 mb-8">
+  Interactive WebAssembly demos. Coming soon — these will be built in Rust and
+  compiled to WASM with <code>wasm-pack</code>.
+</p>
+
+<!-- TODO: mount WASM demos here.
+     Plan: build a Rust crate, compile with wasm-pack, copy the generated
+     pkg/ output via Eleventy passthrough, and import it from a small JS
+     loader on this page. -->
+<div id="demo-root" class="rounded border border-dashed border-gray-300 p-8 text-center text-gray-400">
+  Demo placeholder
+</div>
