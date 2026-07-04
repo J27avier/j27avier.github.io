@@ -2,7 +2,7 @@
 // Descriptions contain inline HTML (links, line breaks) and are rendered as-is.
 export default [
   {
-    title: "ACM Conference: Electric Vehicle V2G",
+    title: "Thesis: RL for Electric Vehicles",
     img: "VPP-op-size-round.png",
     date: "May 2023",
     category: "Graduate Research",
@@ -18,7 +18,7 @@ export default [
     description: `Federated learning (FL) is a machine learning technique that facilitates joint training of a model without sharing local data. FL addresses privacy, security, access rights, and heterogeneous data issues. While this privacy-preserving technique has become increasingly popular, its distributed nature exposes new threats from malicious participants. <br><br> In this project, I created heterogeneous datasets based on Fashion-MNIST, replicated and tested various attack detection techniques, and ran experiments that trained a Federated Convolutional Neural Network. Other team members contributed by implementing the attacks, implementing the models and configuring the GPU servers.`,
   },
   {
-    title: "Robot Arm & Visual Control",
+    title: "Visual Servoing on Robot Arm",
     img: "Robot-sized-round.png",
     date: "December 2021",
     category: "Graduate Project (6 members)",
@@ -34,7 +34,7 @@ export default [
     description: `As a component of a large multinational beverage company's operations monitoring platform, this project analyzed the GPS coordinates of their delivery vehicles. The GPS system posted the coordinates at regular intervals, allowing us to generate alerts whenever a vehicle visited a client, exceeded its visit time, entered a prohibited geofence, and other similar events. <br><br> The project was deployed in Azure Databricks, and I was responsible for designing the code that identified each alert.`,
   },
   {
-    title: "IEEE Conference: Leader-follower",
+    title: "IEEE: Omni-robot Visual Tracking",
     img: "Mobile-size-round.png",
     date: "August 2019",
     category: "Undergraduate Publication",

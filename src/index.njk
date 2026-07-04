@@ -9,25 +9,29 @@ title: Home
     class="w-32 h-32 rounded-full ring-1 ring-gray-200 shrink-0"
   />
   <div class="text-center sm:text-left">
-    <h1 class="text-3xl font-bold mb-2">Hi, I'm {{ site.name }} 👋</h1>
+    <h1 class="text-3xl font-bold mb-2">Javier Sales-Ortiz</h1>
     <p class="text-gray-600">
-      Software engineer. I build things and occasionally write about them.
-      <!-- TODO: flesh out the about blurb -->
+      Software Engineer at
+      <a href="https://rlcore.ai" class="text-blue-600 hover:underline">RL Core</a>.
+    </p>
+    <p class="text-gray-600 mt-2">
+      I care about software architecture and making software talk to hardware.
+      Away from the keyboard, I'm at another one... the piano.
     </p>
   </div>
 </section>
 
 <section>
-  <h2 class="text-xl font-semibold mb-6">Academic Projects</h2>
+  <h2 class="text-xl font-semibold mb-6">Past Projects</h2>
 
   <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
     {% for project in projects %}
       <button
         type="button"
-        class="group text-center cursor-pointer"
+        class="group text-center cursor-pointer focus:outline-none"
         onclick="document.getElementById('project-{{ loop.index }}').showModal()"
       >
-        <div class="aspect-square overflow-hidden rounded-2xl ring-1 ring-gray-200 transition group-hover:ring-blue-400">
+        <div class="aspect-square overflow-hidden rounded-2xl ring-1 ring-gray-200 transition group-hover:ring-blue-400 group-focus-visible:ring-2 group-focus-visible:ring-blue-400">
           <img
             src="/img/portfolio/{{ project.img }}"
             alt="{{ project.title }}"
@@ -53,7 +57,7 @@ title: Home
         <img
           src="/img/portfolio/{{ project.img }}"
           alt="{{ project.title }}"
-          class="w-full max-w-md mx-auto object-contain rounded-2xl ring-1 ring-gray-200"
+          class="w-full max-w-md mx-auto object-contain"
         />
         <h3 class="mt-4 text-2xl font-bold">{{ project.title }}</h3>
         <p class="text-sm text-gray-500">{{ project.category }} · {{ project.date }}</p>

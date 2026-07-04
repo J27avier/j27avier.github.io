@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+/* Lock background scrolling while a modal <dialog> is open. */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
