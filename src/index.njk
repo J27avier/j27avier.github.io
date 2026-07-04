@@ -2,18 +2,66 @@
 layout: layouts/base.njk
 title: Home
 ---
-<section class="mb-12">
-  <h1 class="text-3xl font-bold mb-3">Hi, I'm {{ site.name }} 👋</h1>
-  <p class="text-gray-600">
-    Software engineer. I build things and occasionally write about them.
-    <!-- TODO: flesh out the about blurb -->
-  </p>
+<section class="mb-12 flex flex-col sm:flex-row items-center gap-6">
+  <img
+    src="/img/profile.png"
+    alt="{{ site.name }}"
+    class="w-32 h-32 rounded-full ring-1 ring-gray-200 shrink-0"
+  />
+  <div class="text-center sm:text-left">
+    <h1 class="text-3xl font-bold mb-2">Hi, I'm {{ site.name }} 👋</h1>
+    <p class="text-gray-600">
+      Software engineer. I build things and occasionally write about them.
+      <!-- TODO: flesh out the about blurb -->
+    </p>
+  </div>
 </section>
 
 <section>
-  <h2 class="text-xl font-semibold mb-4">Projects</h2>
-  <ul class="space-y-2 text-gray-600">
-    <!-- TODO: add projects -->
-    <li>Coming soon…</li>
-  </ul>
+  <h2 class="text-xl font-semibold mb-6">Academic Projects</h2>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+    {% for project in projects %}
+      <button
+        type="button"
+        class="group text-center cursor-pointer"
+        onclick="document.getElementById('project-{{ loop.index }}').showModal()"
+      >
+        <div class="aspect-square overflow-hidden rounded-2xl ring-1 ring-gray-200 transition group-hover:ring-blue-400">
+          <img
+            src="/img/portfolio/{{ project.img }}"
+            alt="{{ project.title }}"
+            class="w-full h-full object-cover scale-[1.12] transition group-hover:opacity-90"
+          />
+        </div>
+        <h3 class="mt-3 text-sm font-medium text-gray-800">{{ project.title }}</h3>
+        <p class="text-xs text-gray-400">{{ project.date }}</p>
+      </button>
+    {% endfor %}
+  </div>
+
+  {# Expanding detail modals — one native <dialog> per project. #}
+  {% for project in projects %}
+    <dialog
+      id="project-{{ loop.index }}"
+      class="m-auto w-[min(90vw,42rem)] rounded-lg p-0 backdrop:bg-black/50"
+    >
+      <form method="dialog" class="flex justify-end p-2">
+        <button class="text-gray-400 hover:text-gray-700 text-2xl leading-none px-2" aria-label="Close">&times;</button>
+      </form>
+      <div class="px-6 pb-8 text-center">
+        <img
+          src="/img/portfolio/{{ project.img }}"
+          alt="{{ project.title }}"
+          class="w-full max-w-md mx-auto object-contain rounded-2xl ring-1 ring-gray-200"
+        />
+        <h3 class="mt-4 text-2xl font-bold">{{ project.title }}</h3>
+        <p class="text-sm text-gray-500">{{ project.category }} · {{ project.date }}</p>
+        <p class="mt-2 text-xs uppercase tracking-wide text-gray-400">{{ project.tech }}</p>
+        <div class="mt-4 text-left text-gray-600 leading-relaxed [&_a]:text-blue-600 [&_a]:underline">
+          {{ project.description | safe }}
+        </div>
+      </div>
+    </dialog>
+  {% endfor %}
 </section>
