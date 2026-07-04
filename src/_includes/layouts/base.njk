@@ -1,0 +1,83 @@
+{% import "components/toasts.njk" as ui -%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>{{ title }} · {{ site.name }}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <link rel="icon" href="/img/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-bg text-ink">
+    <header class="border-b border-line">
+      <nav class="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between gap-6">
+        <div class="flex items-baseline gap-6">
+          <a href="/" class="text-lg font-bold tracking-tight hover:text-accent">{{ site.name }}</a>
+          <a href="/blog/" class="font-mono text-xs uppercase tracking-wider text-muted hover:text-accent">Blog</a>
+          <a href="/demos/" class="font-mono text-xs uppercase tracking-wider text-muted hover:text-accent">Demos</a>
+        </div>
+
+        {# Purely decorative "light mode" toggle — it only trolls. #}
+        <div class="relative">
+          <button
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle light mode"
+            data-toast="theme-toast"
+            data-active="text-accent border-accent"
+            class="border border-line p-1.5 text-muted transition hover:text-accent hover:border-accent focus:outline-none focus-visible:text-accent focus-visible:border-accent cursor-pointer"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+
+          {# Toast drops out of the toggle. #}
+          {% call ui.toast("theme-toast", "down") %}
+            <span class="whitespace-nowrap">Where we're going, we don't need light mode.</span>
+            <img src="/img/delorean.png" alt="" class="h-10 w-auto shrink-0" />
+          {% endcall %}
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-1 max-w-2xl mx-auto px-4 py-12 w-full">
+      {{ content | safe }}
+    </main>
+
+    <footer class="border-t border-line">
+      <div class="max-w-2xl mx-auto px-4 py-6 font-mono text-xs text-muted flex justify-between items-center">
+        <span>© {{ site.author }}</span>
+        <div class="relative">
+          <button id="kenobi" type="button" data-toast="kenobi-toast" data-active="text-accent" class="text-muted hover:text-accent transition focus:outline-none focus-visible:text-accent cursor-pointer">hello there.</button>
+          {% call ui.toast("kenobi-toast", "up") %}
+            General Kenobi!
+          {% endcall %}
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll("[data-toast]").forEach(function (btn) {
+        var toast = document.getElementById(btn.getAttribute("data-toast"));
+        if (!toast) return;
+        var hide = (toast.getAttribute("data-hide") || "").split(" ").filter(Boolean);
+        var active = (btn.getAttribute("data-active") || "").split(" ").filter(Boolean);
+        var timer;
+        btn.addEventListener("click", function () {
+          active.forEach(function (c) { btn.classList.add(c); });
+          hide.forEach(function (c) { toast.classList.remove(c); });
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            hide.forEach(function (c) { toast.classList.add(c); });
+            active.forEach(function (c) { btn.classList.remove(c); });
+          }, 2800);
+        });
+      });
+    </script>
+  </body>
+</html>

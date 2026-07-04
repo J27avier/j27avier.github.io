@@ -1,0 +1,13 @@
+{# Click-to-reveal toast; dir "down" drops below trigger, "up" rises above. Pairs with the [data-toast] handler in base.njk. #}
+{% macro toast(id, dir="down") -%}
+{%- set hide = "opacity-0 -translate-y-1" if dir == "down" else "opacity-0 translate-y-1" -%}
+{%- set pos = "top-full mt-2" if dir == "down" else "bottom-full mb-2" -%}
+<div
+  id="{{ id }}"
+  role="status"
+  data-hide="{{ hide }}"
+  class="absolute right-0 {{ pos }} w-max max-w-[80vw] z-50 {{ hide }} pointer-events-none transition duration-300 flex items-center gap-3 border border-accent bg-surface px-3 py-2 font-mono text-xs text-ink shadow-[4px_4px_0_0_var(--color-accent)]"
+>
+  {{ caller() }}
+</div>
+{%- endmacro %}

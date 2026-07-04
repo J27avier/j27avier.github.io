@@ -1,0 +1,103 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+<section class="mb-10 flex flex-col sm:flex-row items-center gap-8">
+  <img
+    src="/img/profile4.jpg"
+    alt="{{ site.name }}"
+    class="w-32 h-32 object-cover border border-line shadow-[10px_10px_0_0_var(--color-accent)] shrink-0 transition duration-200 hover:shadow-[16px_16px_0_0_var(--color-accent)]"
+  />
+  <div class="text-center sm:text-left">
+    <h1 class="text-3xl font-bold tracking-tight mb-2">Javier Sales-Ortiz</h1>
+    <p class="text-ink">
+      Software Engineer at
+      <a href="https://rlcore.ai" class="text-accent underline decoration-accent/40 hover:decoration-accent underline-offset-2">RL Core</a>.
+    </p>
+    <p class="text-ink/70 mt-2 leading-relaxed">
+      I care about software architecture and making software talk to hardware.
+      Away from the keyboard, I'm at another one... the piano.
+    </p>
+  </div>
+</section>
+
+<nav class="mb-14 flex flex-wrap justify-center gap-x-6 gap-y-2 text-muted">
+  <a
+    href="https://www.linkedin.com/in/javier-sales-ortiz/"
+    target="_blank" rel="noopener"
+    class="flex items-center gap-1.5 hover:text-accent transition"
+    aria-label="LinkedIn"
+  >
+    {% include "icons/linkedin.svg" %}
+    <span class="font-mono text-xs uppercase tracking-wider">LinkedIn</span>
+  </a>
+  <a
+    href="https://github.com/J27avier"
+    target="_blank" rel="noopener"
+    class="flex items-center gap-1.5 hover:text-accent transition"
+    aria-label="GitHub"
+  >
+    {% include "icons/github.svg" %}
+    <span class="font-mono text-xs uppercase tracking-wider">GitHub</span>
+  </a>
+  <a
+    href="https://scholar.google.com/citations?user=GOrXQLcAAAAJ"
+    target="_blank" rel="noopener"
+    class="flex items-center gap-1.5 hover:text-accent transition"
+    aria-label="Google Scholar"
+  >
+    {% include "icons/scholar.svg" %}
+    <span class="font-mono text-xs uppercase tracking-wider">Scholar</span>
+  </a>
+</nav>
+
+<section>
+  <div class="flex items-baseline justify-between border-b border-line pb-2 mb-6">
+    <h2 class="text-xl font-bold">Past Projects</h2>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-8">
+    {% for project in projects %}
+      <button
+        type="button"
+        class="group text-left cursor-pointer focus:outline-none"
+        onclick="document.getElementById('project-{{ loop.index }}').showModal()"
+      >
+        <div class="aspect-square overflow-hidden border border-line bg-surface transition group-hover:border-accent group-hover:shadow-[10px_10px_0_0_var(--color-accent)] group-focus-visible:border-accent group-focus-visible:shadow-[10px_10px_0_0_var(--color-accent)]">
+          <img
+            src="/img/portfolio/{{ project.img }}"
+            alt="{{ project.title }}"
+            class="w-full h-full object-cover scale-[1.12] transition group-hover:opacity-90"
+          />
+        </div>
+        <h3 class="mt-4 text-sm font-semibold text-ink group-hover:text-accent transition">{{ project.title }}</h3>
+        <p class="font-mono text-xs text-muted">{{ project.date }}</p>
+      </button>
+    {% endfor %}
+  </div>
+
+  {# Expanding detail modals — one native <dialog> per project. #}
+  {% for project in projects %}
+    <dialog
+      id="project-{{ loop.index }}"
+      class="m-auto w-[min(92vw,44rem)] p-0 bg-surface text-ink border-2 border-accent backdrop:bg-black/70"
+    >
+      <form method="dialog" class="flex justify-end p-2">
+        <button class="font-mono text-lg leading-none px-2 text-muted hover:text-accent cursor-pointer" aria-label="Close">[×]</button>
+      </form>
+      <div class="px-6 pb-8">
+        <img
+          src="/img/portfolio/{{ project.img }}"
+          alt="{{ project.title }}"
+          class="w-full max-w-md mx-auto object-contain"
+        />
+        <h3 class="mt-5 text-2xl font-bold">{{ project.title }}</h3>
+        <p class="font-mono text-xs uppercase tracking-wider text-muted mt-1">{{ project.category }} · {{ project.date }}</p>
+        <p class="font-mono text-xs text-teal mt-2">{{ project.tech }}</p>
+        <div class="mt-4 text-ink/80 leading-relaxed [&_a]:text-accent [&_a]:underline [&_a]:decoration-accent/50 [&_a]:underline-offset-2">
+          {{ project.description | safe }}
+        </div>
+      </div>
+    </dialog>
+  {% endfor %}
+</section>
