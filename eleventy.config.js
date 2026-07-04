@@ -1,6 +1,7 @@
 export default function (eleventyConfig) {
-  // Copy static images straight through to the output.
+  // Copy static images and self-hosted fonts straight through to the output.
   eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/fonts");
 
   // Format a Date as YYYY-MM-DD for templates.
   eleventyConfig.addFilter("readableDate", (date) =>

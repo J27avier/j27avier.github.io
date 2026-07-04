@@ -1,5 +1,54 @@
 @import "tailwindcss";
 
+/* ---- Self-hosted variable fonts (latin subset) ---- */
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/source-serif-4-var.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-var.woff2") format("woff2");
+}
+
+/* ---- Design tokens (Manjaro-dark palette) ----
+   Defining these in @theme generates matching utilities:
+   bg-bg, text-ink, border-line, text-accent, font-serif, font-mono, etc. */
+@theme {
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-bg: #18181b;        /* near-black page */
+  --color-surface: #212127;   /* cards / panels one step up */
+  --color-line: #34343c;      /* borders / rules */
+  --color-ink: #e4e4e7;       /* primary text */
+  --color-muted: #8a8a94;     /* metadata / secondary */
+  --color-accent: #35bf5c;    /* Manjaro green */
+  --color-teal: #16a085;      /* deeper secondary */
+}
+
+/* ---- Base ---- */
+html {
+  scrollbar-color: var(--color-line) var(--color-bg);
+}
+body {
+  font-family: var(--font-serif);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Selection uses the accent, dark text for contrast. */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
 /* Lock background scrolling while a modal <dialog> is open. */
 html:has(dialog[open]) {
   overflow: hidden;

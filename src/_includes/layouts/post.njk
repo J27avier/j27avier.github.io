@@ -1,10 +1,12 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="prose">
-  <p class="text-sm text-gray-500">{{ page.date | readableDate }}</p>
-  <h1 class="text-2xl font-bold mb-4">{{ title }}</h1>
+<article class="leading-relaxed [&_p]:mt-4 [&_h2]:mt-8 [&_h2]:text-xl [&_h2]:font-bold [&_a]:text-accent [&_a]:underline [&_a]:decoration-accent/50 [&_a]:underline-offset-2 [&_code]:font-mono [&_code]:text-sm [&_code]:text-teal">
+  <p class="font-mono text-xs uppercase tracking-wider text-muted">{{ page.date | readableDate }}</p>
+  <h1 class="text-3xl font-bold mt-1 mb-2">{{ title }}</h1>
   {{ content | safe }}
 </article>
 
-<p class="mt-10"><a href="/blog/" class="text-blue-600 hover:underline">← Back to blog</a></p>
+<p class="mt-12 font-mono text-xs">
+  <a href="/blog/" class="text-muted hover:text-accent">← back to blog</a>
+</p>

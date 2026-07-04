@@ -2,15 +2,17 @@
 layout: layouts/base.njk
 title: Blog
 ---
-<h1 class="text-2xl font-bold mb-6">Blog</h1>
+<div class="border-b border-line pb-2 mb-6">
+  <h1 class="text-2xl font-bold">Blog</h1>
+</div>
 
 <ul class="space-y-3">
   {% for post in collections.post | reverse %}
-    <li class="flex gap-3">
-      <span class="text-sm text-gray-400 shrink-0">{{ post.date | readableDate }}</span>
-      <a href="{{ post.url }}" class="text-blue-600 hover:underline">{{ post.data.title }}</a>
+    <li class="flex gap-4 items-baseline">
+      <span class="font-mono text-xs text-muted shrink-0">{{ post.date | readableDate }}</span>
+      <a href="{{ post.url }}" class="text-accent underline decoration-accent/40 hover:decoration-accent underline-offset-2">{{ post.data.title }}</a>
     </li>
   {% else %}
-    <li class="text-gray-500">No posts yet.</li>
+    <li class="font-mono text-sm text-muted">No posts yet.</li>
   {% endfor %}
 </ul>

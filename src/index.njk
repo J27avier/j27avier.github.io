@@ -2,74 +2,76 @@
 layout: layouts/base.njk
 title: Home
 ---
-<section class="mb-12 flex flex-col sm:flex-row items-center gap-6">
+<section class="mb-10 flex flex-col sm:flex-row items-center gap-8">
   <img
-    src="/img/profile.png"
+    src="/img/profile4.jpg"
     alt="{{ site.name }}"
-    class="w-32 h-32 rounded-full ring-1 ring-gray-200 shrink-0"
+    class="w-32 h-32 object-cover border border-line shadow-[10px_10px_0_0_var(--color-accent)] shrink-0 transition duration-200 hover:shadow-[16px_16px_0_0_var(--color-accent)]"
   />
   <div class="text-center sm:text-left">
-    <h1 class="text-3xl font-bold mb-2">Javier Sales-Ortiz</h1>
-    <p class="text-gray-600">
+    <h1 class="text-3xl font-bold tracking-tight mb-2">Javier Sales-Ortiz</h1>
+    <p class="text-ink">
       Software Engineer at
-      <a href="https://rlcore.ai" class="text-blue-600 hover:underline">RL Core</a>.
+      <a href="https://rlcore.ai" class="text-accent underline decoration-accent/40 hover:decoration-accent underline-offset-2">RL Core</a>.
     </p>
-    <p class="text-gray-600 mt-2">
+    <p class="text-ink/70 mt-2 leading-relaxed">
       I care about software architecture and making software talk to hardware.
       Away from the keyboard, I'm at another one... the piano.
     </p>
   </div>
 </section>
 
-<nav class="mb-12 flex justify-center gap-6 text-gray-500">
+<nav class="mb-14 flex flex-wrap justify-center gap-x-6 gap-y-2 text-muted">
   <a
     href="https://www.linkedin.com/in/javier-sales-ortiz/"
     target="_blank" rel="noopener"
-    class="flex items-center gap-1.5 hover:text-gray-900"
+    class="flex items-center gap-1.5 hover:text-accent transition"
     aria-label="LinkedIn"
   >
     {% include "icons/linkedin.svg" %}
-    <span class="text-sm">LinkedIn</span>
+    <span class="font-mono text-xs uppercase tracking-wider">LinkedIn</span>
   </a>
   <a
     href="https://github.com/J27avier"
     target="_blank" rel="noopener"
-    class="flex items-center gap-1.5 hover:text-gray-900"
+    class="flex items-center gap-1.5 hover:text-accent transition"
     aria-label="GitHub"
   >
     {% include "icons/github.svg" %}
-    <span class="text-sm">GitHub</span>
+    <span class="font-mono text-xs uppercase tracking-wider">GitHub</span>
   </a>
   <a
     href="https://scholar.google.com/citations?user=GOrXQLcAAAAJ"
     target="_blank" rel="noopener"
-    class="flex items-center gap-1.5 hover:text-gray-900"
+    class="flex items-center gap-1.5 hover:text-accent transition"
     aria-label="Google Scholar"
   >
     {% include "icons/scholar.svg" %}
-    <span class="text-sm">Scholar</span>
+    <span class="font-mono text-xs uppercase tracking-wider">Scholar</span>
   </a>
 </nav>
 
 <section>
-  <h2 class="text-xl font-semibold mb-6">Past Projects</h2>
+  <div class="flex items-baseline justify-between border-b border-line pb-2 mb-6">
+    <h2 class="text-xl font-bold">Past Projects</h2>
+  </div>
 
-  <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-8">
     {% for project in projects %}
       <button
         type="button"
-        class="group text-center cursor-pointer focus:outline-none"
+        class="group text-left cursor-pointer focus:outline-none"
         onclick="document.getElementById('project-{{ loop.index }}').showModal()"
       >
-        <div class="aspect-square overflow-hidden rounded-2xl ring-1 ring-gray-200 transition group-hover:ring-blue-400 group-focus-visible:ring-2 group-focus-visible:ring-blue-400">
+        <div class="aspect-square overflow-hidden border border-line bg-surface transition group-hover:border-accent group-hover:shadow-[10px_10px_0_0_var(--color-accent)] group-focus-visible:border-accent group-focus-visible:shadow-[10px_10px_0_0_var(--color-accent)]">
           <img
             src="/img/portfolio/{{ project.img }}"
             alt="{{ project.title }}"
             class="w-full h-full object-cover scale-[1.12] transition group-hover:opacity-90"
           />
         </div>
-        <h3 class="mt-3 text-sm font-medium text-gray-800">{{ project.title }}</h3>
-        <p class="text-xs text-gray-400">{{ project.date }}</p>
+        <h3 class="mt-4 text-sm font-semibold text-ink group-hover:text-accent transition">{{ project.title }}</h3>
+        <p class="font-mono text-xs text-muted">{{ project.date }}</p>
       </button>
     {% endfor %}
   </div>
@@ -78,21 +80,21 @@ title: Home
   {% for project in projects %}
     <dialog
       id="project-{{ loop.index }}"
-      class="m-auto w-[min(90vw,42rem)] rounded-lg p-0 backdrop:bg-black/50"
+      class="m-auto w-[min(92vw,44rem)] p-0 bg-surface text-ink border-2 border-accent backdrop:bg-black/70"
     >
       <form method="dialog" class="flex justify-end p-2">
-        <button class="text-gray-400 hover:text-gray-700 text-2xl leading-none px-2" aria-label="Close">&times;</button>
+        <button class="font-mono text-lg leading-none px-2 text-muted hover:text-accent cursor-pointer" aria-label="Close">[×]</button>
       </form>
-      <div class="px-6 pb-8 text-center">
+      <div class="px-6 pb-8">
         <img
           src="/img/portfolio/{{ project.img }}"
           alt="{{ project.title }}"
           class="w-full max-w-md mx-auto object-contain"
         />
-        <h3 class="mt-4 text-2xl font-bold">{{ project.title }}</h3>
-        <p class="text-sm text-gray-500">{{ project.category }} · {{ project.date }}</p>
-        <p class="mt-2 text-xs uppercase tracking-wide text-gray-400">{{ project.tech }}</p>
-        <div class="mt-4 text-left text-gray-600 leading-relaxed [&_a]:text-blue-600 [&_a]:underline">
+        <h3 class="mt-5 text-2xl font-bold">{{ project.title }}</h3>
+        <p class="font-mono text-xs uppercase tracking-wider text-muted mt-1">{{ project.category }} · {{ project.date }}</p>
+        <p class="font-mono text-xs text-teal mt-2">{{ project.tech }}</p>
+        <div class="mt-4 text-ink/80 leading-relaxed [&_a]:text-accent [&_a]:underline [&_a]:decoration-accent/50 [&_a]:underline-offset-2">
           {{ project.description | safe }}
         </div>
       </div>
