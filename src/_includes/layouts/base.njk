@@ -1,3 +1,4 @@
+{% import "components/toasts.njk" as ui -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,7 +27,9 @@
             id="theme-toggle"
             type="button"
             aria-label="Toggle light mode"
-            class="border border-line p-1.5 text-muted transition hover:text-accent hover:border-accent cursor-pointer"
+            data-toast="theme-toast"
+            data-active="text-accent border-accent"
+            class="border border-line p-1.5 text-muted transition hover:text-accent hover:border-accent focus:outline-none focus-visible:text-accent focus-visible:border-accent cursor-pointer"
           >
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
@@ -34,14 +37,10 @@
           </button>
 
           {# Toast drops out of the toggle. #}
-          <div
-            id="theme-toast"
-            role="status"
-            class="absolute right-0 top-full mt-2 w-max max-w-[80vw] z-50 -translate-y-1 opacity-0 pointer-events-none transition duration-300 flex items-center gap-3 border border-accent bg-surface px-3 py-2 font-mono text-xs text-ink shadow-[4px_4px_0_0_var(--color-accent)]"
-          >
+          {% call ui.toast("theme-toast", "down") %}
             <span class="whitespace-nowrap">Where we're going, we don't need light mode.</span>
             <img src="/img/delorean.png" alt="" class="h-10 w-auto shrink-0" />
-          </div>
+          {% endcall %}
         </div>
       </nav>
     </header>
@@ -51,28 +50,34 @@
     </main>
 
     <footer class="border-t border-line">
-      <div class="max-w-2xl mx-auto px-4 py-6 font-mono text-xs text-muted flex justify-between">
+      <div class="max-w-2xl mx-auto px-4 py-6 font-mono text-xs text-muted flex justify-between items-center">
         <span>© {{ site.author }}</span>
-        <span>built with 11ty + tailwind</span>
+        <div class="relative">
+          <button id="kenobi" type="button" data-toast="kenobi-toast" data-active="text-accent" class="text-muted hover:text-accent transition focus:outline-none focus-visible:text-accent cursor-pointer">hello there.</button>
+          {% call ui.toast("kenobi-toast", "up") %}
+            General Kenobi!
+          {% endcall %}
+        </div>
       </div>
     </footer>
 
     <script>
-      (function () {
-        var btn = document.getElementById("theme-toggle");
-        var toast = document.getElementById("theme-toast");
-        if (!btn || !toast) return;
+      document.querySelectorAll("[data-toast]").forEach(function (btn) {
+        var toast = document.getElementById(btn.getAttribute("data-toast"));
+        if (!toast) return;
+        var hide = (toast.getAttribute("data-hide") || "").split(" ").filter(Boolean);
+        var active = (btn.getAttribute("data-active") || "").split(" ").filter(Boolean);
         var timer;
         btn.addEventListener("click", function () {
-          btn.classList.add("text-accent", "border-accent");
-          toast.classList.remove("opacity-0", "-translate-y-1");
+          active.forEach(function (c) { btn.classList.add(c); });
+          hide.forEach(function (c) { toast.classList.remove(c); });
           clearTimeout(timer);
           timer = setTimeout(function () {
-            toast.classList.add("opacity-0", "-translate-y-1");
-            btn.classList.remove("text-accent", "border-accent");
+            hide.forEach(function (c) { toast.classList.add(c); });
+            active.forEach(function (c) { btn.classList.remove(c); });
           }, 2800);
         });
-      })();
+      });
     </script>
   </body>
 </html>
